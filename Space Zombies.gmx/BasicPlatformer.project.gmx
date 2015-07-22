@@ -11,6 +11,10 @@
     <sprite>sprites\spr_platform</sprite>
     <sprite>sprites\spr_portal</sprite>
     <sprite>sprites\spr_life</sprite>
+    <sprite>sprites\spr_player_idle</sprite>
+    <sprite>sprites\spr_player_walk</sprite>
+    <sprite>sprites\spr_player_jump</sprite>
+    <sprite>sprites\spr_player_fall</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
