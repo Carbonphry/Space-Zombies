@@ -35,6 +35,7 @@ key_down = 0;
 maxmovespeed = 1;
 drift = -speed;
 face = 1;
+
 </string>
           </argument>
         </arguments>
@@ -116,7 +117,7 @@ if (key_right = 0)
 //Sprint
 if (keyboard_check(vk_shift))
     {
-    maxmovespeed = 5;
+    maxmovespeed = 3;
     }
     else
     {
@@ -197,9 +198,10 @@ if (hspeed = 0)
     {
     sprite_index = spr_player_idle;
     }
-if (maxmovespeed &gt; 1)
+if (hspeed &gt; 1 || hspeed &lt; -1)
     {
     sprite_index = spr_player_sprint;
+    image_speed = 0.15;
     }
 
 if (vsp &lt; 0)
