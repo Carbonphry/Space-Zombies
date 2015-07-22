@@ -62,7 +62,8 @@ face = 1;
 key_right = keyboard_check(vk_right);
 key_left = keyboard_check(vk_left);
 key_down = keyboard_check(vk_down);
-key_jump = keyboard_check_pressed(vk_alt);
+key_jump = keyboard_check_pressed(vk_space);
+
 // React to player input
 // Inertia Mechanic
 if (hspeed &lt; maxmovespeed)
@@ -111,11 +112,22 @@ if (key_right = 0)
         }
     }
 }
+
+//Sprint
+if (keyboard_check(vk_shift))
+    {
+    maxmovespeed = 5;
+    }
+    else
+    {
+    maxmovespeed = 1;
+}
 //Jump Mechanic
 if (vsp &lt; 10) vsp += grav;
 if (place_meeting(x,y+1,obj_wall))
 {
-    if (key_jump) vsp = -jumpspeed
+    if (key_jump) 
+    vsp = -jumpspeed
 }
 //Horizontal Collision
 if (place_meeting(x + hspeed,y,obj_wall))
@@ -177,13 +189,17 @@ if (face = 0)
 if (hspeed != 0)
     {
     sprite_index = spr_player_walk;
-    //image_xscale = 1;
+    
     image_speed = 0.2;
     }
 
 if (hspeed = 0)
     {
     sprite_index = spr_player_idle;
+    }
+if (maxmovespeed &gt; 1)
+    {
+    sprite_index = spr_player_sprint;
     }
 
 if (vsp &lt; 0)

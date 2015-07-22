@@ -15,6 +15,7 @@
     <sprite>sprites\spr_player_walk</sprite>
     <sprite>sprites\spr_player_jump</sprite>
     <sprite>sprites\spr_player_fall</sprite>
+    <sprite>sprites\spr_player_sprint</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
