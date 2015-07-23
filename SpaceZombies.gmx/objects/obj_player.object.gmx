@@ -36,6 +36,54 @@ maxmovespeed = 1;
 drift = -speed;
 face = 1;
 roll = 0;
+rollcooldown = 0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>rollcooldown = 0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>roll = 0;
+
 
 </string>
           </argument>
@@ -133,7 +181,7 @@ if (place_meeting(x,y+1,obj_wall))
 }
 
 //Dodge roll
-if (keyboard_check_pressed(vk_alt))
+if (keyboard_check_pressed(vk_alt) &amp;&amp; rollcooldown = 0)
     {
     if (hspeed &gt; 0)
         {
@@ -143,6 +191,8 @@ if (keyboard_check_pressed(vk_alt))
         {
         hspeed = -6;
         }
+    alarm[1] = 60;
+    rollcooldown = 1;
     }
 
     
@@ -219,10 +269,12 @@ if ((hspeed &gt; 1 &amp;&amp; hspeed &lt;= 3 || hspeed &lt; -1 &amp;&amp; hspeed
     sprite_index = spr_player_sprint;
     image_speed = 0.15;
     }
+
 if (hspeed &gt; 3 || hspeed &lt; -3)
     {
     sprite_index = spr_player_roll;
     roll = 1;
+    alarm[0] = 20        
     }
 
 if (vsp &lt; 0)
