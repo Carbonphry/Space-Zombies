@@ -28,6 +28,7 @@
     <object>objects\obj_wall</object>
     <object>objects\obj_platform</object>
     <object>objects\obj_portal</object>
+    <object>objects\obj_player_roll</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_tutorial</room>
