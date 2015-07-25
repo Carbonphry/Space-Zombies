@@ -25,9 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>obj_player.x = target_x;
-obj_player.y = target_y;
-room_goto(target_r);
+            <string>//Gotta figure out how to go to other rooms.
+room_goto(room1)
 </string>
           </argument>
         </arguments>
