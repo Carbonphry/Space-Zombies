@@ -285,8 +285,8 @@ if (vsp &gt;= 0 &amp;&amp; (!place_meeting(x, y+1, obj_wall)))
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_deactivate_object(obj_player);
-room_goto(rm_dead);
+            <string>///instance_deactivate_object(obj_player);
+///room_goto(rm_dead);
 </string>
           </argument>
         </arguments>
