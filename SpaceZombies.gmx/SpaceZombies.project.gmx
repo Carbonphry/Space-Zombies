@@ -13,12 +13,14 @@
     <sprite>sprites\spr_portal</sprite>
     <sprite>sprites\spr_life</sprite>
     <sprite>sprites\spr_player_idle</sprite>
+    <sprite>sprites\spr_player_turn</sprite>
     <sprite>sprites\spr_player_idle_pistol</sprite>
     <sprite>sprites\spr_player_walk</sprite>
     <sprite>sprites\spr_player_walk_pistol</sprite>
     <sprite>sprites\spr_player_jump</sprite>
     <sprite>sprites\spr_player_fall</sprite>
     <sprite>sprites\spr_player_sprint</sprite>
+    <sprite>sprites\spr_player_stop</sprite>
     <sprite>sprites\spr_player_roll</sprite>
   </sprites>
   <backgrounds name="background"/>
