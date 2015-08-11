@@ -33,10 +33,10 @@ jumpspeed = 7;
 movespeed = 0.3;
 key_down = 0;
 maxmovespeed = 5;
-drift = -speed;
-global.face = 1;
+global.face = 1;A
 stamina = 100;
 maxstamina = 100;
+transition = false;
 
 
 
@@ -214,21 +214,64 @@ if (global.face = 0)
     image_xscale = -1;
     }
 
-if (hspeed != 0)
-    {
-    sprite_index = spr_player_walk;
-    image_speed = 0.15;
-    }
 
+    
+    
+    
+    if(keyboard_check(ord('A')) &amp;&amp; global.face = 0 &amp;&amp; transition = false)
+{
+    transition = true;
+   sprite_index = spr_player_turn;
+   
+   if(image_number = image_index)
+    {
+        transition = false;
+    }
+}
+
+if(keyboard_check(ord('D')) &amp;&amp; global.face = 1 &amp;&amp; transition = false)
+{
+    transition = true;
+   sprite_index = spr_player_turn;
+   
+   if(image_index = image_number)
+    {
+        transition = false;
+    }
+}
+    
+    
+    
+    
+    
 if (hspeed = 0 )
     {
     sprite_index = spr_player_idle;
     }
-if (hspeed &gt; 1 &amp;&amp; hspeed &lt;= 3 || hspeed &lt; -1 &amp;&amp; hspeed &gt;= -3)
-    {
-    sprite_index = spr_player_sprint;
-    image_speed = 0.15;
-    }
+    
+   if (hspeed != 0 &amp;&amp; transition = false )
+         {
+              sprite_index = spr_player_walk;
+                image_speed = 0.15;
+            }
+    
+
+    
+    
+   if (hspeed &gt; 1 &amp;&amp; hspeed &lt;= 3 || hspeed &lt; -1 &amp;&amp; hspeed &gt;= -3)
+        {
+                     sprite_index = spr_player_sprint;
+                     image_speed = 0.15;
+        }
+    
+    
+
+    
+     
+    
+    
+    
+    
 
 if (vsp &lt; 0)
     {
@@ -239,6 +282,7 @@ if (vsp &gt;= 0 &amp;&amp; (!place_meeting(x, y+1, obj_wall)))
     {
     sprite_index = spr_player_fall;
     }
+    
 </string>
           </argument>
         </arguments>
