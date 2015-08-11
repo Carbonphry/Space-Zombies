@@ -35,6 +35,8 @@ key_down = 0;
 maxmovespeed = 5;
 drift = -speed;
 global.face = 1;
+stamina = 100;
+maxstamina = 100;
 
 
 
@@ -124,6 +126,7 @@ if (key_right = 0)
 if (keyboard_check(vk_shift))
     {
     maxmovespeed = 3;
+    stamina = stamina-1
     }
     else
     {
