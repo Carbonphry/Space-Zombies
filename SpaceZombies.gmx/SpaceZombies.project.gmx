@@ -38,6 +38,7 @@
     <object>objects\obj_menu</object>
     <object>objects\obj_endGame</object>
     <object>objects\obj_wall</object>
+    <object>objects\Camera_Control</object>
     <object>objects\obj_platform</object>
     <object>objects\obj_portal</object>
     <object>objects\obj_player_roll</object>
