@@ -104,7 +104,7 @@ scr_menu();
 //Font and Alignment
 draw_set_halign(fa_center);
 draw_set_valign(fa_center);
-draw_set_font(fnt_arial);
+draw_set_font(fnt_pixel);
 draw_set_color(c_white);
 
 //Drawing the Menu Items

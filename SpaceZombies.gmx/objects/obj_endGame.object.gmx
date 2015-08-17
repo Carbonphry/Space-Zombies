@@ -27,8 +27,7 @@
             <kind>1</kind>
             <string>///End Screen Items 
 end_screen[0] = "Main Menu";
-end_screen[1] = "Restart";
-end_screen[2] = "Quit Game";
+end_screen[1] = "Quit Game";
 
 space = 64;
 epos = 0;
@@ -99,7 +98,7 @@ scr_endGame();
 //Font and Alignment
 draw_set_halign(fa_center);
 draw_set_valign(fa_center);
-draw_set_font(fnt_arial);
+draw_set_font(fnt_pixel);
 draw_set_color(c_white);
 
 //Drawing the Menu Items
@@ -112,8 +111,8 @@ for (e = 0; e &lt; array_length_1d(end_screen); e++) {
 draw_sprite(spr_cursor, 0, x - 80, y + epos * space);
 
 //Game Over
-draw_set_font(fnt_arial);
-draw_text(512, 150, "Game Over");
+draw_set_font(fnt_pixel);
+draw_text(room_width/2, 192, "Game Over");
 </string>
           </argument>
         </arguments>

@@ -1,7 +1,6 @@
 switch (mpos) {
     case 0: {
     room_goto(rm_tutorial);
-    instance_activate_object(obj_player);
     break;
     } 
     case 1: {
