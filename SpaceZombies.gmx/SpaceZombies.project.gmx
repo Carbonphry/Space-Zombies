@@ -12,9 +12,11 @@
     <sprite>sprites\spr_cursor</sprite>
     <sprite>sprites\spr_portal</sprite>
     <sprite>sprites\spr_life</sprite>
+    <sprite>sprites\sprite16</sprite>
     <sprite>sprites\spr_player_idle</sprite>
     <sprite>sprites\spr_player_turn</sprite>
     <sprite>sprites\spr_player_idle_pistol</sprite>
+    <sprite>sprites\spr_player_arm_pistol</sprite>
     <sprite>sprites\spr_player_walk</sprite>
     <sprite>sprites\spr_player_walk_pistol</sprite>
     <sprite>sprites\spr_player_jump</sprite>
@@ -22,6 +24,8 @@
     <sprite>sprites\spr_player_sprint</sprite>
     <sprite>sprites\spr_player_stop</sprite>
     <sprite>sprites\spr_player_roll</sprite>
+    <sprite>sprites\spr_zombie_walk</sprite>
+    <sprite>sprites\spr_item_pistol</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
