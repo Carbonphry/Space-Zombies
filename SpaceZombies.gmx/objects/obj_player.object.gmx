@@ -211,7 +211,7 @@ if (hspeed &gt; 0) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Animations
+            <string>///Animations]
 if (global.face = 1) 
     {
     image_xscale = 1;
@@ -253,7 +253,7 @@ if (hspeed = 0 &amp;&amp; is_sprinting = false &amp;&amp; !keyboard_check_direct
     sprite_index = spr_player_idle;
     }
     
-else if (hspeed &gt; 0.8 || hspeed &lt; -0.8 &amp;&amp; is_sprinting = false &amp;&amp;keyboard_check_direct(mb_right))
+else if (hspeed &gt; 0.8 || hspeed &lt; -0.8 &amp;&amp; is_sprinting = false &amp;&amp; !keyboard_check_direct(mb_right))
     {
     sprite_index = spr_player_walk;
     image_speed = 0.15;
@@ -410,7 +410,11 @@ room_goto(rm_dead);
           <argument>
             <kind>1</kind>
             <string>///stamina bar
-draw_healthbar(view_xview + 100, view_yview - 10, view_xview - 100, view_yview+10, stamina, c_black, c_red, c_lime, 1, true, true)
+draw_healthbar(view_xview[1] + 100, view_yview[1] - 10, view_xview[1] - 100, view_yview[1] + 10, stamina, c_black, c_red, c_lime, 1, true, true)
+
+//draw_healthbar(Camera_Control.x + 100, Camera_Control.y - 10, Camera_Control.x - 100, Camera_Control.y + 10, stamina, c_black, c_red, c_lime, 1, true, true)
+
+//draw_healthbar(x + 100, y - 10, x - 100, y+ 10, stamina, c_black, c_red, c_lime, 1, true, true)
 </string>
           </argument>
         </arguments>
