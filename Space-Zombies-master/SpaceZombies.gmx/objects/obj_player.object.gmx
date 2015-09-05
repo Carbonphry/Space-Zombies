@@ -253,14 +253,14 @@ if (hspeed = 0 &amp;&amp; is_sprinting = false &amp;&amp; !keyboard_check_direct
     sprite_index = spr_player_idle;
     }
     
-else if (hspeed &gt; 0.8 || hspeed &lt; -0.8 &amp;&amp; is_sprinting = false &amp;&amp;keyboard_check_direct(mb_right))
+else if (hspeed &gt; 0.8 || hspeed &lt; -0.8 &amp;&amp; is_sprinting = false &amp;&amp; !keyboard_check_direct(mb_right))
     {
     sprite_index = spr_player_walk;
     image_speed = 0.15;
     }
 
     
-if (is_sprinting = true &amp;&amp; (hspeed &lt;= 3 || hspeed &gt;= -3))
+if (is_sprinting = true &amp;&amp; (hspeed &lt;= 3 || hspeed &gt;= -3) &amp;&amp;!keyboard_check_direct(mb_right))
     {
     sprite_index = spr_player_stop;
     image_speed = 0.25;
@@ -410,7 +410,7 @@ room_goto(rm_dead);
           <argument>
             <kind>1</kind>
             <string>///stamina bar
-draw_healthbar(view_xview + 100, view_yview - 10, view_xview - 100, view_yview+10, stamina, c_black, c_red, c_lime, 1, true, true)
+draw_healthbar(view_xview[1] + 100, view_yview[1] + 10,view_xview[1] - 100, view_yview[1] - 10, stamina, c_black, c_red, c_lime, 1, true, true)
 </string>
           </argument>
         </arguments>
