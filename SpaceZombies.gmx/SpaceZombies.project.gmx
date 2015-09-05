@@ -15,10 +15,10 @@
     <sprite>sprites\spr_zombie_walk</sprite>
     <sprite>sprites\spr_zombie_idle</sprite>
     <sprite>sprites\sprite16</sprite>
+    <sprite>sprites\spr_item_pistol</sprite>
     <sprites name="player">
       <sprites name="default">
         <sprite>sprites\spr_player_idle</sprite>
-        <sprite>sprites\spr_player_die</sprite>
         <sprite>sprites\spr_player_walk</sprite>
         <sprite>sprites\spr_player_sprint</sprite>
         <sprite>sprites\spr_player_stop</sprite>
@@ -38,7 +38,6 @@
         </sprites>
       </sprites>
     </sprites>
-    <sprite>sprites\spr_inv_backpanel</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -50,7 +49,6 @@
     <font>fonts\fnt_pixel</font>
   </fonts>
   <objects name="objects">
-    <object>objects\obj_inventory</object>
     <object>objects\obj_player</object>
     <object>objects\obj_enemy</object>
     <object>objects\obj_menu</object>
