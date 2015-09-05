@@ -100,6 +100,7 @@ scr_menu();
           <argument>
             <kind>1</kind>
             <string>///The Visual Stuff
+texture_set_interpolation(false);
 
 //Font and Alignment
 draw_set_halign(fa_center);
@@ -115,6 +116,8 @@ for (m = 0; m &lt; array_length_1d(menu); m++) {
 
 //The Cursor
 draw_sprite(spr_cursor, 0, x - 80, y + mpos * space);
+
+
 </string>
           </argument>
         </arguments>

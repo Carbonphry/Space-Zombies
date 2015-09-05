@@ -14,11 +14,10 @@
     <sprite>sprites\spr_life</sprite>
     <sprite>sprites\spr_zombie_walk</sprite>
     <sprite>sprites\spr_zombie_idle</sprite>
-    <sprite>sprites\sprite16</sprite>
-    <sprite>sprites\spr_item_pistol</sprite>
     <sprites name="player">
       <sprites name="default">
         <sprite>sprites\spr_player_idle</sprite>
+        <sprite>sprites\spr_playing_die</sprite>
         <sprite>sprites\spr_player_walk</sprite>
         <sprite>sprites\spr_player_sprint</sprite>
         <sprite>sprites\spr_player_stop</sprite>

@@ -251,6 +251,7 @@ else if (keyboard_check_direct(mb_right) &amp;&amp; hspeed &gt; 0)
 if (hspeed = 0 &amp;&amp; is_sprinting = false &amp;&amp; !keyboard_check_direct(mb_right))
     {
     sprite_index = spr_player_idle;
+    image_speed = 0.025
     }
     
 else if (hspeed &gt; 0.8 || hspeed &lt; -0.8 &amp;&amp; is_sprinting = false &amp;&amp; !keyboard_check_direct(mb_right))

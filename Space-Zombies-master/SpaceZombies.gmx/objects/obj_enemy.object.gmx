@@ -27,10 +27,10 @@
             <kind>1</kind>
             <string>///Intialize Variables
 grav = 0.5;
-h_speed = 0.75;
+h_speed = 0.5;
 v_speed = 0;
 
-image_speed = 0.15;
+image_speed = 0.10;
 </string>
           </argument>
         </arguments>
