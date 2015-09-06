@@ -32,7 +32,7 @@ hsp = 0;
 jumpspeed = 7;
 movespeed = 0.3;
 key_down = 0;
-maxmovespeed = 5;
+maxmovespeed = 3;
 global.face = 1;
 stamina = 100;
 maxstamina = 100;
@@ -128,7 +128,7 @@ if (key_right = 0)
 //Sprint
 if (keyboard_check(vk_shift) &amp;&amp; stamina &gt;0)
     {
-    maxmovespeed = 3;
+    maxmovespeed = 2;
     stamina = stamina-1
     }
     else
@@ -318,7 +318,7 @@ else if (vsp &gt;= 0 &amp;&amp; (!place_meeting(x, y+1, obj_wall)))
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_enemy">
+    <event eventtype="4" ename="obj_zombie">
       <action>
         <libid>1</libid>
         <id>603</id>

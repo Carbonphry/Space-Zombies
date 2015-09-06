@@ -12,12 +12,9 @@
     <sprite>sprites\spr_cursor</sprite>
     <sprite>sprites\spr_portal</sprite>
     <sprite>sprites\spr_life</sprite>
-    <sprite>sprites\spr_zombie_walk</sprite>
-    <sprite>sprites\spr_zombie_idle</sprite>
     <sprites name="player">
       <sprites name="default">
         <sprite>sprites\spr_player_idle</sprite>
-        <sprite>sprites\spr_playing_die</sprite>
         <sprite>sprites\spr_player_walk</sprite>
         <sprite>sprites\spr_player_sprint</sprite>
         <sprite>sprites\spr_player_stop</sprite>
@@ -25,6 +22,7 @@
         <sprite>sprites\spr_player_jump</sprite>
         <sprite>sprites\spr_player_fall</sprite>
         <sprite>sprites\spr_player_hang</sprite>
+        <sprite>sprites\spr_player_die</sprite>
       </sprites>
       <sprites name="weapons">
         <sprites name="ranged">
@@ -35,6 +33,13 @@
             <sprite>sprites\spr_player_walk_pistol</sprite>
           </sprites>
         </sprites>
+      </sprites>
+    </sprites>
+    <sprites name="zombies">
+      <sprites name="defaultzombie">
+        <sprite>sprites\spr_zombie_idle</sprite>
+        <sprite>sprites\spr_zombie_walk</sprite>
+        <sprite>sprites\spr_zombie_sprint</sprite>
       </sprites>
     </sprites>
   </sprites>
@@ -49,7 +54,8 @@
   </fonts>
   <objects name="objects">
     <object>objects\obj_player</object>
-    <object>objects\obj_enemy</object>
+    <object>objects\obj_zombie</object>
+    <object>objects\object_zombie_sprinting</object>
     <object>objects\obj_menu</object>
     <object>objects\obj_endGame</object>
     <object>objects\obj_wall</object>
