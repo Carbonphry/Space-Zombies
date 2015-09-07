@@ -46,6 +46,7 @@
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
+    <script>scripts\scr_enemy.gml</script>
     <script>scripts\scr_endGame.gml</script>
     <script>scripts\scr_menu.gml</script>
   </scripts>

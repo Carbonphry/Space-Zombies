@@ -235,8 +235,7 @@
     <instance objName="obj_platform" x="992" y="480" name="inst_6137CEF9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_platform" x="416" y="704" name="inst_BF04136A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_zombie" x="32" y="736" name="inst_37BD5319" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="Camera_Control" x="352" y="160" name="inst_294D1C5B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="object_zombie_sprinting" x="192" y="736" name="inst_D43B8E24" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Camera_Control" x="224" y="512" name="inst_E0CA8356" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
