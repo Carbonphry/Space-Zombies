@@ -26,7 +26,7 @@
       </sprites>
       <sprites name="weapons">
         <sprites name="ranged">
-          <sprites name="pistol">
+          <sprites name="plascut">
             <sprite>sprites\spr_player_arm_aim_plascut</sprite>
             <sprite>sprites\spr_player_walk_aim_plascut</sprite>
             <sprite>sprites\spr_player_idle_plascut</sprite>
@@ -46,6 +46,14 @@
         <sprite>sprites\spr_zombie_walk</sprite>
         <sprite>sprites\spr_zombie_attack</sprite>
         <sprite>sprites\spr_zombie_sprint</sprite>
+      </sprites>
+    </sprites>
+    <sprites name="items">
+      <sprites name="consumables"/>
+      <sprites name="weapons">
+        <sprites name="ranged">
+          <sprite>sprites\plascut</sprite>
+        </sprites>
       </sprites>
     </sprites>
   </sprites>
