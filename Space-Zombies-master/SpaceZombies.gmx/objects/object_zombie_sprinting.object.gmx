@@ -26,8 +26,10 @@
           <argument>
             <kind>1</kind>
             <string>///Intialize Variables
+state = e_state.idle;
+
 grav = 0.5;
-h_speed = 1.5;
+h_speed = 0;
 v_speed = 0;
 
 image_speed = 0.25;
@@ -55,6 +57,33 @@ image_speed = 0.25;
             <kind>1</kind>
             <string>///AI Behavior and Movement
 x += h_speed;
+
+switch (state) {
+    case e_state.idle:
+    {         
+        grav = 0.5;
+        h_speed = 0;
+        v_speed = 0;
+        
+        if (distance_to_object(obj_player) &lt; 128) {
+            state = e_state.chase;
+        }
+    }
+    break;
+    case e_state.chase:
+    {
+        grav = 0.5;
+        dir = sign(obj_player.x - x);
+        h_speed = dir * 1.5;
+        v_speed = 0;
+        
+        if (distance_to_object(obj_player) &gt; 192) {
+            state = e_state.idle;
+        }   
+    }
+    break;
+    
+}
 
 //Collision Handling
 if (place_meeting(x+h_speed, y, obj_wall)) {
