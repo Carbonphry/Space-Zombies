@@ -29,8 +29,8 @@
 state = e_state.idle;
 
 grav = 0.5;
-h_speed = 0;
-v_speed = 0;
+hspeed = 0;
+vspeed = 0;
 
 
 </string>
@@ -56,19 +56,15 @@ v_speed = 0;
           <argument>
             <kind>1</kind>
             <string>///AI Behavior and Movement
-x += h_speed;
+x += hspeed;
 
 switch (state) {
 //Idle State
     case e_state.idle:
-    {
-        object_set_sprite(obj_zombie, spr_zombie_idle); 
-        image_speed = 0.05;
-        
+    {      
         grav = 0.5;
-        h_speed = 0;
-        v_speed = 0;
-        
+        hspeed = 0;
+        vspeed = 0;
         if (distance_to_object(obj_player) &lt; 96) {
             state = e_state.chase;
         }
@@ -76,14 +72,11 @@ switch (state) {
     break;
 //Chase State
     case e_state.chase:
-    {
-        object_set_sprite(obj_zombie, spr_zombie_walk); 
-        image_speed = 0.15;
-    
+    {   
         grav = 0.5;
         dir = sign(obj_player.x - x);
-        h_speed = dir * 0.5;
-        v_speed = 0;
+        hspeed = dir * 0.1;
+        vspeed = 0;
         
         if (distance_to_object(obj_player) &gt; 128) {
             state = e_state.idle;
@@ -94,12 +87,49 @@ switch (state) {
 }
 
 //Collision Handling
-if (place_meeting(x+h_speed, y, obj_wall)) {
-    while(!place_meeting(x+sign(h_speed), y, obj_wall)) {
-        x += sign(h_speed);
+if (place_meeting(x+hspeed, y, obj_wall)) {
+    while(!place_meeting(x+sign(hspeed), y, obj_wall)) {
+        x += sign(hspeed);
     }
-    h_speed = -h_speed;
+    hspeed = -hspeed;
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///animations
+if (hspeed &lt; 0) {
+    sprite_index = spr_zombie_walk;
+    image_xscale = -1; 
+    image_speed = 0.1;
+}
+if (hspeed &gt; 0) {
+    sprite_index = spr_zombie_walk; 
+    image_xscale = 1; 
+    image_speed = 0.1;
+}
+if (hspeed = 0) {
+    sprite_index = spr_zombie_idle; 
+    image_speed = 0.1;
+}
+
+
 </string>
           </argument>
         </arguments>
