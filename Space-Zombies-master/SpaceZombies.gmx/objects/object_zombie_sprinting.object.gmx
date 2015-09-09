@@ -65,7 +65,7 @@ switch (state) {
         h_speed = 0;
         v_speed = 0;
         
-        if (distance_to_object(obj_player) &lt; 128) {
+        if (distance_to_object(obj_player) &lt; 96) {
             state = e_state.chase;
         }
     }
@@ -77,7 +77,7 @@ switch (state) {
         h_speed = dir * 1.5;
         v_speed = 0;
         
-        if (distance_to_object(obj_player) &gt; 192) {
+        if (distance_to_object(obj_player) &gt; 128) {
             state = e_state.idle;
         }   
     }
