@@ -59,6 +59,7 @@ image_speed = 0.25;
 x += h_speed;
 
 switch (state) {
+//Idle State
     case e_state.idle:
     {         
         grav = 0.5;
@@ -70,6 +71,7 @@ switch (state) {
         }
     }
     break;
+//Chase State
     case e_state.chase:
     {
         grav = 0.5;
