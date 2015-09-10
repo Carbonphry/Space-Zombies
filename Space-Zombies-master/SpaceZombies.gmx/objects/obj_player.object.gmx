@@ -37,7 +37,9 @@ global.face = 1;
 stamina = 100;
 maxstamina = 100;
 is_sprinting = false;
-
+ifledging = false;
+x = obj_player.x
+y = obj_player.y
 
 
 
@@ -78,53 +80,55 @@ key_jump = keyboard_check_pressed(vk_space);
 
 // React to player input
 // Inertia Mechanic
-if (hspeed &lt; maxmovespeed)
+if (ifledging = false)
 {
-    if (key_right = 1)
+    if (hspeed &lt; maxmovespeed)
     {
-        motion_add(0,movespeed)
-    }
-}
-if (hspeed &gt; -maxmovespeed)
-{
-    if (key_left = 1)
-    {
-        motion_add(0,-movespeed)
-    }
-}
-if (hspeed &gt;= maxmovespeed)
-{
-    if (key_right = 1)
-    {
-        motion_add(0,-movespeed)
-    }
-}
-if (hspeed &lt;= -maxmovespeed)
-{
-     if (key_left = 1)
-    {
-        motion_add(0,movespeed)
-    }
-}
-if (key_right = 0)
-{
-    if (key_left = 0)
-    {
-        if (hspeed &gt; 0)
-        {
-            motion_add(0,-movespeed)
-        }
-        if (hspeed &lt; 0)
+        if (key_right = 1)
         {
             motion_add(0,movespeed)
         }
-        if (hspeed = 0)
+    }
+    if (hspeed &gt; -maxmovespeed)
+    {
+        if (key_left = 1)
         {
-            motion_set(0,0)
+            motion_add(0,-movespeed)
         }
     }
-}
-
+    if (hspeed &gt;= maxmovespeed)
+    {
+        if (key_right = 1)
+        {
+            motion_add(0,-movespeed)
+        }
+    }
+    if (hspeed &lt;= -maxmovespeed)
+    {
+         if (key_left = 1)
+        {
+            motion_add(0,movespeed)
+        }
+    }
+    if (key_right = 0)
+    {
+        if (key_left = 0)
+        {
+            if (hspeed &gt; 0)
+            {
+                motion_add(0,-movespeed)
+            }
+            if (hspeed &lt; 0)
+            {
+                motion_add(0,movespeed)
+            }
+            if (hspeed = 0)
+            {
+                motion_set(0,0)
+            }
+        }
+    }
+ }   
 //Sprint
 if (keyboard_check(vk_shift) &amp;&amp; stamina &gt;0)
     {
@@ -144,8 +148,12 @@ if (vsp &lt; 10) vsp += grav;
 if (place_meeting(x,y+1,obj_wall))
 {
     if (key_jump) 
+    {
     vsp = -jumpspeed
+    instance_create (x,y,obj_ledgegrab)
+    }
 }
+
 
 //Dodge
 
