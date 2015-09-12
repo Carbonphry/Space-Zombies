@@ -22,6 +22,7 @@
         <sprite>sprites\spr_player_jump</sprite>
         <sprite>sprites\spr_player_fall</sprite>
         <sprite>sprites\spr_player_hang</sprite>
+        <sprite>sprites\spr_player_hang_collide</sprite>
         <sprite>sprites\spr_player_die</sprite>
       </sprites>
       <sprites name="weapons">
@@ -48,6 +49,7 @@
         <sprite>sprites\spr_zombie_sprint</sprite>
       </sprites>
     </sprites>
+<<<<<<< HEAD
     <sprites name="items">
       <sprites name="consumables"/>
       <sprites name="weapons">
@@ -56,6 +58,9 @@
         </sprites>
       </sprites>
     </sprites>
+=======
+    <sprite>sprites\spr_ledge</sprite>
+>>>>>>> origin/master
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -78,6 +83,8 @@
     <object>objects\obj_platform</object>
     <object>objects\obj_portal</object>
     <object>objects\obj_player_roll</object>
+    <object>objects\obj_ledge</object>
+    <object>objects\obj_ledgegrab</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_menu</room>
