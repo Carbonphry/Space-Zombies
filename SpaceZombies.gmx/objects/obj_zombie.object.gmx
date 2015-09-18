@@ -31,6 +31,7 @@ state = e_state.idle;
 grav = 0.5;
 h_speed = 0;
 v_speed = 0;
+jumpspeed = 5;
 
 
 </string>
@@ -83,7 +84,11 @@ switch (state) {
         grav = 0.5;
         dir = sign(obj_player.x - x);
         h_speed = dir * 0.5;
-        v_speed = 0;
+        if (v_speed &lt; 10) v_speed += grav;
+        
+        while (obj_zombie.x = obj_player.x &amp;&amp; obj_zombie.y != obj_player.y) {
+            v_speed = -jumpspeed;
+        }
         
         if (distance_to_object(obj_player) &gt; 128) {
             state = e_state.idle;
@@ -98,7 +103,14 @@ if (place_meeting(x+h_speed, y, obj_wall)) {
     while(!place_meeting(x+sign(h_speed), y, obj_wall)) {
         x += sign(h_speed);
     }
-    h_speed = -h_speed;
+    h_speed = 0;
+}
+
+if (place_meeting(x, y+v_speed, obj_wall)) {
+    while(!place_meeting(x, y+sign(v_speed), obj_wall)) {
+        y += sign(v_speed);
+    }
+    v_speed = 0;
 }
 </string>
           </argument>
@@ -132,6 +144,15 @@ if (h_speed &lt; 0)
     image_xscale = 1
     sprite_index = spr_zombie_walk
     }  
+        if (h_speed = 0) 
+        {
+            image_xscale = 1
+            sprite_index = spr_zombie_idle
+        }
+            while (obj_zombie.x = obj_player.x &amp;&amp; obj_zombie.y != obj_player.y) {
+                image_xscale = 1
+                sprite_index = spr_zombie_attack;
+            }
 
 </string>
           </argument>
