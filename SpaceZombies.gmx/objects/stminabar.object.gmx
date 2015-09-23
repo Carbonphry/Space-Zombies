@@ -49,7 +49,7 @@
           <argument>
             <kind>1</kind>
             <string>///stamina bar
-draw_healthbar(view_xview[1] + 100, view_yview[1] + 10,view_xview[1] - 100, view_yview[1] - 10, global.stamina, c_black, c_red, c_lime, 1, true, true)
+draw_healthbar(view_xview[1]+ 300, view_yview[1] + 20,view_xview[1], view_yview[1] - 100, global.stamina, c_black, c_red, c_lime, 1, true, true)
 </string>
           </argument>
         </arguments>
