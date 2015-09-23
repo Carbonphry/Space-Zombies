@@ -51,6 +51,8 @@
     </sprites>
     <sprite>sprites\spr_ledge</sprite>
     <sprite>sprites\sprite30</sprite>
+    <sprite>sprites\spr_border</sprite>
+    <sprite>sprites\spr_items</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -58,6 +60,9 @@
     <script>scripts\scr_enemy.gml</script>
     <script>scripts\scr_endGame.gml</script>
     <script>scripts\scr_menu.gml</script>
+    <script>scripts\scr_itempickup.gml</script>
+    <script>scripts\scr_itemdrop.gml</script>
+    <script>scripts\scr_itemcheck.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_pixel</font>
@@ -77,6 +82,8 @@
     <object>objects\obj_ledge</object>
     <object>objects\obj_ledgegrab</object>
     <object>objects\stminabar</object>
+    <object>objects\obj_inventory</object>
+    <object>objects\obj_itemtest</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_menu</room>
