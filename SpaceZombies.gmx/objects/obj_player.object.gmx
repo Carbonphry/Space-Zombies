@@ -37,6 +37,7 @@ global.face = 1;
 maxstamina = 100;
 is_sprinting = false;
 ifledging = false;
+is_dodging = false;
 x = obj_player.x
 y = obj_player.y
 
@@ -161,15 +162,23 @@ if (keyboard_check_pressed(vk_alt)&amp;&amp; keyboard_check(ord('D')))
         instance_destroy();
         instance_create(x,y,obj_player_roll);
         global.face = 1;
+        is_dodging = true;
         
     }
+else {
+    is_dodging = false;
+}
 if (keyboard_check_pressed(vk_alt)&amp;&amp; keyboard_check(ord('A')))
     {
         instance_destroy();
         instance_create(x,y,obj_player_roll);
         global.face = 0;
+        is_dodging = true;
         
     }
+else {
+    is_dodging = false;
+}
     
 //Horizontal Collision
 if (place_meeting(x + hspeed,y,obj_wall))
@@ -348,8 +357,10 @@ if (ifledging = true)
           <argument>
             <kind>1</kind>
             <string>///Death and Respawn
+if (is_dodging = false) {
 room_goto(rm_dead);
 instance_destroy();
+};
 </string>
           </argument>
         </arguments>
@@ -373,8 +384,10 @@ instance_destroy();
           <argument>
             <kind>1</kind>
             <string>///Death and Respawn
+if (is_dodging = false) {
 room_goto(rm_dead);
 instance_destroy();
+};
 </string>
           </argument>
         </arguments>

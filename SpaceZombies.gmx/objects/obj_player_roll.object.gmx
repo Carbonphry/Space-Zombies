@@ -32,6 +32,7 @@ hsp = 0;
 face = 1;
 key_down = 0;
 image_speed = 0.3;
+is_dodging = true;
 
 
 

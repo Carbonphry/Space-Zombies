@@ -57,7 +57,6 @@ jumpspeed = 5;
           <argument>
             <kind>1</kind>
             <string>///AI Behavior and Movement
-x += h_speed;
 
 switch (state) {
 //Idle State
@@ -66,12 +65,13 @@ switch (state) {
         object_set_sprite(obj_zombie, spr_zombie_idle); 
         image_speed = 0.05;
         
-        grav = 0.5;
-        h_speed = 0;
-        v_speed = 0;
-        
         if (distance_to_object(obj_player) &lt; 96) {
             state = e_state.chase;
+        }
+        if (distance_to_object(obj_player) &gt; 96) {
+        if (distance_to_object(obj_pathing) &lt; 64) {
+            state = e_state.pathing;
+        }
         }
     }
     break;
@@ -81,22 +81,43 @@ switch (state) {
         object_set_sprite(obj_zombie, spr_zombie_walk); 
         image_speed = 0.15;
     
-        grav = 0.5;
         dir = sign(obj_player.x - x);
         h_speed = dir * 0.5;
-        if (v_speed &lt; 10) v_speed += grav;
         
-        while (obj_zombie.x = obj_player.x &amp;&amp; obj_zombie.y != obj_player.y) {
+        if (obj_zombie.x = obj_player.x) {
+            if (obj_zombie.y &gt; obj_player.y) {
             v_speed = -jumpspeed;
+            }
         }
         
         if (distance_to_object(obj_player) &gt; 128) {
             state = e_state.idle;
         }   
     }
-    break;
+    break; 
+//Pathing State  
+    case e_state.pathing:
+{
+    object_set_sprite(obj_zombie, spr_zombie_walk);
+    image_speed = 0.15;
     
+    dir = sign(obj_pathing.x - x);
+    h_speed = dir * 0.5;
+    
+    if (distance_to_object(obj_player &lt; 96)) {
+        state = e_state.chase;
+    }
+    if (distance_to_object(obj_player) &gt; 96) {
+        if (distance_to_object(obj_pathing) &gt; 64) {
+            state = e_state.idle;
+        }
+        }
+    break;
 }
+}
+
+//Gravity 
+if (v_speed &lt; 10) v_speed += grav;
 
 //Collision Handling
 if (place_meeting(x+h_speed, y, obj_wall)) {
@@ -105,6 +126,7 @@ if (place_meeting(x+h_speed, y, obj_wall)) {
     }
     h_speed = 0;
 }
+x += h_speed;
 
 if (place_meeting(x, y+v_speed, obj_wall)) {
     while(!place_meeting(x, y+sign(v_speed), obj_wall)) {
@@ -112,6 +134,7 @@ if (place_meeting(x, y+v_speed, obj_wall)) {
     }
     v_speed = 0;
 }
+y += v_speed;
 </string>
           </argument>
         </arguments>

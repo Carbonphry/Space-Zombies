@@ -68,6 +68,7 @@
     <object>objects\object_zombie_sprinting</object>
     <object>objects\obj_menu</object>
     <object>objects\obj_endGame</object>
+    <object>objects\obj_pathing</object>
     <object>objects\obj_wall</object>
     <object>objects\Camera_Control</object>
     <object>objects\obj_platform</object>
