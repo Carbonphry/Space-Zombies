@@ -109,9 +109,6 @@
     <instance objName="obj_platform" x="960" y="672" name="inst_D043A6F3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_platform" x="960" y="640" name="inst_01F88AB3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_platform" x="992" y="640" name="inst_67C3DF8E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_platform" x="384" y="672" name="inst_F5C13195" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_platform" x="416" y="672" name="inst_04AA0D51" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_platform" x="448" y="672" name="inst_323A623E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="0" y="448" name="inst_B26B4C58" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="0" y="416" name="inst_EC5C883A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="0" y="384" name="inst_82B0ECC8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -234,8 +231,8 @@
     <instance objName="obj_platform" x="416" y="704" name="inst_BF04136A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_zombie" x="32" y="736" name="inst_37BD5319" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Camera_Control" x="224" y="512" name="inst_E0CA8356" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="object_zombie_sprinting" x="768" y="736" name="inst_E0EF2B08" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_ledge" x="368" y="674" name="inst_883EE6B7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_zombie_sprinting" x="768" y="736" name="inst_E0EF2B08" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ledge" x="364" y="677" name="inst_883EE6B7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ledge" x="320" y="704" name="inst_859C4218" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ledgegrab" x="64" y="512" name="inst_2ABE09C5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="stminabar" x="64" y="32" name="inst_9D68888D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -247,8 +244,6 @@
     <instance objName="obj_ledge" x="536" y="586" name="inst_0DEFB89E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ledge" x="560" y="572" name="inst_A9F972AC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="448" y="384" name="inst_870880FB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_zombie" x="480" y="352" name="inst_A1057B53" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_pathing" x="537" y="380" name="inst_644AACDF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ledge" x="640" y="480" name="inst_2EE25FB2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ledge" x="576" y="576" name="inst_1A82999F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ledge" x="650" y="538" name="inst_335C5962" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -267,9 +262,14 @@
     <instance objName="obj_platform" x="672" y="576" name="inst_E7B80C3C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_platform" x="672" y="576" name="inst_95C65412" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_platform" x="704" y="576" name="inst_42347B41" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_pathing" x="629" y="499" name="inst_6B4C7ED3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_inventory" x="320" y="512" name="inst_2ABE39A8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_itemtest" x="256" y="736" name="inst_C05268EE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall" x="176" y="732" name="inst_A0A38C1D" locked="0" code="" scaleX="1.03125" scaleY="1.3125" colour="4294967295" rotation="0"/>
+    <instance objName="obj_trampoline" x="168" y="745" name="inst_3C43D679" locked="0" code="" scaleX="0.5625" scaleY="0.46875" colour="4294967295" rotation="0"/>
+    <instance objName="obj_trampoline" x="184" y="745" name="inst_C375545D" locked="0" code="" scaleX="0.5625" scaleY="0.5" colour="4294967295" rotation="0"/>
+    <instance objName="obj_pathing" x="466" y="659" name="inst_669417C7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall" x="415" y="681" name="inst_EF4B3C16" locked="0" code="" scaleX="3.15625" scaleY="0.419354826211929" colour="4294967295" rotation="0"/>
+    <instance objName="obj_zombie" x="412" y="658" name="inst_46A2B9C1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

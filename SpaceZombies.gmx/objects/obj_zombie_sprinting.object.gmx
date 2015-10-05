@@ -33,7 +33,7 @@ h_speed = 0;
 v_speed = 0;
 jumpspeed = 8;
 
-
+image_speed = 0.25;
 </string>
           </argument>
         </arguments>
@@ -61,33 +61,23 @@ jumpspeed = 8;
 switch (state) {
 //Idle State
     case e_state.idle:
-    {
-        object_set_sprite(obj_zombie, spr_zombie_idle); 
-        image_speed = 0.05;
-        
-        if (obj_zombie.y = obj_player.y) {
-            if (distance_to_object(obj_player) &lt; 96) {
-                state = e_state.chase;
-            }
-        }
-        if (obj_zombie.y &lt; obj_player.y) {
-            if (distance_to_object(obj_pathing &lt; 96)) {
-                state = e_state.pathing;
-            }   
+    {         
+        object_set_sprite(obj_zombie_sprinting, spr_zombie_idle);    
+    
+        if (distance_to_object(obj_player) &lt; 96) {
+            state = e_state.chase;
         }
     }
     break;
 //Chase State
     case e_state.chase:
     {
-        object_set_sprite(obj_zombie, spr_zombie_walk); 
-        image_speed = 0.15;
-    
+        object_set_sprite(obj_zombie_sprinting, spr_zombie_sprint);
         dir = sign(obj_player.x - x);
-        h_speed = dir * 0.5;
+        h_speed = dir * 1.5;
         
         if (distance_to_object(obj_player) &lt; 128) {
-            if (obj_zombie.y &gt; obj_player.y) {
+            if (obj_zombie_sprinting.y &gt; obj_player.y) {
                 if (place_meeting(x,y+1,obj_wall))
                     {    
                         v_speed = -jumpspeed;
@@ -95,7 +85,7 @@ switch (state) {
                 }
             }
             
-        if (place_meeting(x, y, obj_trampoline)) {
+            if (place_meeting(x, y, obj_trampoline)) {
             if (place_meeting(x,y+1,obj_wall))
                 { 
                     v_speed = -jumpspeed;
@@ -106,23 +96,8 @@ switch (state) {
             state = e_state.idle;
         }   
     }
-    break; 
-//Pathing State  
-    case e_state.pathing:
-{
-    object_set_sprite(obj_zombie, spr_zombie_walk);
-    image_speed = 0.15;
-    
-    dir2 = sign(obj_pathing.x - x);
-    h_speed = dir2 * 0.5;
-    
-    
-    if (obj_zombie.y &gt;= obj_player.y) {
-        state = e_state.idle;
-    }
-    
     break;
-}
+    
 }
 
 //Gravity 
@@ -165,22 +140,16 @@ y += v_speed;
           <argument>
             <kind>1</kind>
             <string>///Animations
-
 if (h_speed &lt; 0)
     {
     image_xscale = -1
-    sprite_index = spr_zombie_walk
+    sprite_index = spr_zombie_sprint
     }
   if (h_speed &gt; 0)
     {
     image_xscale = 1
-    sprite_index = spr_zombie_walk
+    sprite_index = spr_zombie_sprint
     }  
-        if (h_speed = 0) 
-        {
-            image_xscale = 1
-            sprite_index = spr_zombie_idle
-        }
 </string>
           </argument>
         </arguments>

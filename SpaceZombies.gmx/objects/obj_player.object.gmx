@@ -339,7 +339,7 @@ if (ifledging = true)
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="object_zombie_sprinting">
+    <event eventtype="4" ename="obj_zombie_sprinting">
       <action>
         <libid>1</libid>
         <id>603</id>

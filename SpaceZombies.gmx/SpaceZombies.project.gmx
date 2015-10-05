@@ -69,8 +69,9 @@
   </fonts>
   <objects name="objects">
     <object>objects\obj_player</object>
+    <object>objects\obj_trampoline</object>
     <object>objects\obj_zombie</object>
-    <object>objects\object_zombie_sprinting</object>
+    <object>objects\obj_zombie_sprinting</object>
     <object>objects\obj_menu</object>
     <object>objects\obj_endGame</object>
     <object>objects\obj_pathing</object>

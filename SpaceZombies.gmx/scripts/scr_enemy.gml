@@ -1,5 +1,5 @@
 enum e_state {
-    idle, 
+    idle,
     chase,
     pathing
 };
