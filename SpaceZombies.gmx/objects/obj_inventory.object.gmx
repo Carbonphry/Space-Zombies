@@ -88,13 +88,13 @@ for (i = 0; i &lt; maxItems; i += 1)
           <argument>
             <kind>1</kind>
             <string>/// Inventory Open and Close
-if (keyboard_check(ord('I')) = 1 &amp;&amp; invopen = true)
+if (keyboard_check_pressed(ord('I')) = 1 &amp;&amp; invopen = true)
 {
-	invopen = false
+invopen = false
 }
-if (keyboard_check(ord('I')) = 1 &amp;&amp; invopen = false)
+else if (keyboard_check_pressed(ord('I')) = 1 &amp;&amp; invopen = false)
 {
-	invopen = true
+invopen = true
 }
 
 </string>

@@ -38,6 +38,7 @@ maxstamina = 100;
 is_sprinting = false;
 ifledging = false;
 is_dodging = false;
+global.pathing_activate = false;
 x = obj_player.x
 y = obj_player.y
 
@@ -178,6 +179,14 @@ if (keyboard_check_pressed(vk_alt)&amp;&amp; keyboard_check(ord('A')))
     }
 else {
     is_dodging = false;
+}
+
+//Pathing Activation
+if (distance_to_object(obj_pathing) &lt; 64) {
+    global.pathing_activate = true;
+}
+else {
+    global.pathing_activate = false;
 }
     
 //Horizontal Collision
@@ -436,7 +445,8 @@ instance_destroy();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_deactivate_object(obj_player);
+            <string>///Dead
+instance_deactivate_object(obj_player);
 room_goto(rm_dead);
 </string>
           </argument>

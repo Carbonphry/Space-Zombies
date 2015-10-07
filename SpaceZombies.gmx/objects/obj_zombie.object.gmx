@@ -65,15 +65,16 @@ switch (state) {
         object_set_sprite(obj_zombie, spr_zombie_idle); 
         image_speed = 0.05;
         
-        if (obj_zombie.y = obj_player.y) {
+        if (global.pathing_activate = false &amp;&amp; y = obj_player.y) {
             if (distance_to_object(obj_player) &lt; 96) {
                 state = e_state.chase;
             }
         }
-        if (obj_zombie.y &lt; obj_player.y) {
-            if (distance_to_object(obj_pathing &lt; 96)) {
-                state = e_state.pathing;
-            }   
+        
+        if (global.pathing_activate = true &amp;&amp; y &lt; obj_player.y) {
+                if (distance_to_object(obj_pathing &lt; 96)) {
+                    state = e_state.pathing;
+                }   
         }
     }
     break;
@@ -87,7 +88,7 @@ switch (state) {
         h_speed = dir * 0.5;
         
         if (distance_to_object(obj_player) &lt; 128) {
-            if (obj_zombie.y &gt; obj_player.y) {
+            if (y &gt; obj_player.y) {
                 if (place_meeting(x,y+1,obj_wall))
                     {    
                         v_speed = -jumpspeed;
@@ -102,7 +103,7 @@ switch (state) {
                 }
         }
         
-        if (distance_to_object(obj_player) &gt; 128) {
+        if (distance_to_object(obj_player) &gt; 96) {
             state = e_state.idle;
         }   
     }
@@ -117,7 +118,7 @@ switch (state) {
     h_speed = dir2 * 0.5;
     
     
-    if (obj_zombie.y &gt;= obj_player.y) {
+    if (y &gt;= obj_player.y) {
         state = e_state.idle;
     }
     
